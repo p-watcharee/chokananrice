@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xxxข้าวสาร นกยูงคู่ | บริษัท โชคอนันต์ไรซ์(2003) จำกัด</title>
+    <title>ข้าวสาร นกยูงคู่ | บริษัท โชคอนันต์ไรซ์(2003) จำกัด</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
@@ -816,7 +816,7 @@
     <script>
         // Product data
         const products = {
-            hommali: { name: 'ข้าวหอมมะลิแท้ 100%', image: 'images/detail-hommali.jpg' },
+            hommali: { name: 'ข้าวหอมมะลิแท้ 100%', image: 'images/detail-hommali.jpg',desc: 'ข้าวหอมมะลิแท้ sssss', size: 'ขนาด 5กก./15กก./45กก.' },
             broken:  { name: 'ข้าวยี่จ๊อหอมมะลิ',   image: 'images/detail-broken.jpg' },
             yellow:  { name: 'ข้าวเหลืองอ่อน',       image: 'images/detail-yellow.jpg' },
             pathum:  { name: 'ข้าวหอมปทุม',          image: 'images/detail-pathum.jpg' },
@@ -830,9 +830,12 @@
             if (!p) return;
             document.getElementById('modalName').textContent = p.name;
             document.getElementById('modalImage').src = p.image;
-            document.getElementById('modalImage').alt = p.name;
+            document.getElementById('modalImage').alt = p.name
+            document.getElementById('modalDesc').textContent = p.desc;
+            document.getElementById('modalSize').textContent = p.size;
             document.getElementById('productModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+            
         }
 
         function closeModal(e) {
